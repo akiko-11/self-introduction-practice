@@ -29,21 +29,32 @@
     </ol>
 
     <h2>リンク</h2>
-    <a herf="https://github.com/akiko-11/my-fir-git" target="_blank">私のGitHub</a>
+    <a herf="https://github.com/akiko-11" target="_blank">私のGitHub</a>
 
     <h2>好きな風景</h2>
     <img src="landscape.jpg" alt="好きな風景" width="400">
 
     <h2>お問い合わせ</h2>
     <form action="/submit" method="post">
-        <P><label>お名前：<input type="text" name="username" required></label></P>
-        <P><label>お問い合わせ種別：<select name="inquiry-type">
-            <option value="">-- 選択してください --</option>
-            <option value="commonrequest">一般的なお問い合わせ</option>
-            <option value="request">ご意見・ご要望</option>
-        </select></label></P>
-        <p><label>お問い合わせ内容：<textarea name="message" rows="5" cols="20" required></textarea></label></p>
-        <p><label>送信ボタン：<button type="submit">送信ボタン</button></label></p>
+        <div>
+            <label for="contact-name">お名前：</label>
+            <input type="text" id="contact-name" name="name" required>
+        </div>
+        <div>
+            <label for="contact-category">おといあわせ種別：</label>
+            <select id="contact-category" name="category">
+                <option value="">-- 選択してください --</option>
+                <option value="general">一般的のお問い合わせ</option>
+                <option value="feedback">ご意見・ご要望</option>
+            </select>
+        </div>
+        <div>
+            <label for="contact-message">お問い合わせ内容：</label>
+            <textarea id="contact-message" name="message" row="5" required></textarea>
+        </div>
+        <div>
+            <button type="subimit">送信する</button>
+        </div>
     </form>
 
 </body>
